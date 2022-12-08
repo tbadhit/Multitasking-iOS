@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyMusic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Music" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LP8-mY-siV">
+                                <rect key="frame" x="159" y="336" width="73" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cE-Fr-bTA">
+                                <rect key="frame" x="92" y="422" width="56" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Play"/>
+                                <connections>
+                                    <action selector="playMusic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xya-fY-P32"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFo-Zh-QgP">
+                                <rect key="frame" x="254" y="422" width="60" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Stop"/>
+                                <connections>
+                                    <action selector="stopMusic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WRb-CG-hQo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IFo-Zh-QgP" secondAttribute="trailing" constant="76" id="8yQ-19-KWv"/>
+                            <constraint firstItem="4cE-Fr-bTA" firstAttribute="top" secondItem="LP8-mY-siV" secondAttribute="bottom" constant="65" id="HCk-x5-usl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LP8-mY-siV" secondAttribute="trailing" constant="158" id="NeR-Ta-Qy7"/>
+                            <constraint firstItem="IFo-Zh-QgP" firstAttribute="leading" secondItem="4cE-Fr-bTA" secondAttribute="trailing" constant="106" id="YDH-AE-5sE"/>
+                            <constraint firstItem="LP8-mY-siV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="159" id="ca8-QG-acK"/>
+                            <constraint firstItem="IFo-Zh-QgP" firstAttribute="top" secondItem="LP8-mY-siV" secondAttribute="bottom" constant="65" id="fR0-hx-uEb"/>
+                            <constraint firstItem="LP8-mY-siV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="289" id="sKq-3C-tgX"/>
+                            <constraint firstItem="4cE-Fr-bTA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="92" id="zUV-nU-KNo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playButton" destination="4cE-Fr-bTA" id="Uwe-J9-emp"/>
+                        <outlet property="stopButton" destination="IFo-Zh-QgP" id="oTe-ce-u7D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="103" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

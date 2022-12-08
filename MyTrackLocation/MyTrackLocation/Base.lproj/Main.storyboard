@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyTrackLocation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nnk-FH-Wbj">
+                                <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="npZ-Kh-Fin">
+                                <rect key="frame" x="14" y="72" width="51" height="31"/>
+                                <connections>
+                                    <action selector="trackSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="6KN-r4-MXt"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nnk-FH-Wbj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8vg-LO-bSC"/>
+                            <constraint firstItem="nnk-FH-Wbj" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Ajw-fq-TzL"/>
+                            <constraint firstItem="nnk-FH-Wbj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="FLC-Bb-RHA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="npZ-Kh-Fin" secondAttribute="trailing" constant="-63" id="Q7p-s1-TH8"/>
+                            <constraint firstItem="nnk-FH-Wbj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gHg-BR-5bh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="npZ-Kh-Fin" secondAttribute="bottom" constant="-56" id="ldx-9O-6Qh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="nnk-FH-Wbj" id="l27-8Y-jz8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101.53846153846153" y="3.5545023696682461"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
